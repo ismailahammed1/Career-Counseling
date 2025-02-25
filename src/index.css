@@ -1,0 +1,24 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+/* index.css or App.css */
+:root {
+    --danger: #dc3545; /* Example red color */
+    --primary: #007bff; /* Example blue color */
+    --success: #28a745; /* Example green color */
+    --warning: #ffc107; /* Example yellow color */
+  }
+  /* Apply the Blinker font globally */
+
+  body {
+    font-family: 'Rajdhani', sans-serif;
+  }
+  
+  /* Optionally, define a fallback font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+  }
