@@ -9,11 +9,9 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-
   useEffect(() => {
     Aos.init({ duration: 1000 }); // Initialize AOS
   }, []);
-
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -89,16 +87,16 @@ const NavBar = () => {
   );
 
   return (
-    <div className="relative flex justify-between shadow-lg">
+    <div className=" flex justify-between shadow-lg">
       {/* Navbar */}
-      <div className="w-full items-center flex justify-center">
-        <div className="navbar ml-60">
-          <a className="text-xl font-bold text-gray-800">Lytpro</a>
+      <div className=" navbar w-full items-center flex justify-center">
+        <div className=" lg:ml-60 ml-16">
+          <a className="text-xl font-bold text-gray-800">IAR career counselling</a>
         </div>
       </div>
 
       {/* Desktop Menu */}
-      <div className="bg-white w-full items-center flex justify-center">
+      <div className="bg-white w-full items-center flex justify-center navbar ">
         <div className="navbar-center h-20 hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-4 font-semibold gap-2">
             {menuBar}
@@ -173,7 +171,6 @@ const NavBar = () => {
           </button>
         </div>
       </div>
- 
 
       {/* Mobile menu button for toggling */}
       <div className="lg:hidden flex justify-between w-full px-6 py-3">
