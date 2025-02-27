@@ -37,13 +37,14 @@ const NavBar = () => {
       </Link>
       <div className="relative group">
         <button className="block py-2 hover:text-red-800">Services</button>
-        <div className="absolute left-0 w-48 bg-white shadow-lg mt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <div className="absolute left-0 z-10 w-48 bg-white shadow-lg lg:mt-7 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
           <Link
             to="/service1"
             className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
           >
-            <a className="transition-transform transform hover:translate-x-2 inline-block">
-              Service 1
+            <a className="transition-transform transform hover:translate-x-2  inline-block">
+        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
+        Service 1
             </a>
           </Link>
           <Link
@@ -53,7 +54,8 @@ const NavBar = () => {
             "
           >
             <a className="transition-transform transform hover:translate-x-2 inline-block">
-              Service 1
+        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
+        Service 1
             </a>
           </Link>
           <Link
@@ -61,7 +63,8 @@ const NavBar = () => {
             className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
           >
             <a className="transition-transform transform hover:translate-x-2 inline-block">
-              Service 1
+        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
+        Service 1
             </a>
           </Link>
           <Link
@@ -69,7 +72,8 @@ const NavBar = () => {
             className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
           >
             <a className="transition-transform transform hover:translate-x-2 inline-block">
-              Service 1
+        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
+        Service 1
             </a>
           </Link>
         </div>

@@ -20,7 +20,7 @@ const HeaderSlider = () => {
       image:
         "https://res.cloudinary.com/dfn1s2ysa/image/upload/v1740464840/career%20counselling/woman-5678999_1280_rebtzb.jpg",
       title: "I can help you create positive & permanent changes in your life.",
-      subtitle: "---- Easy Solution For",
+      subtitle: " Easy Solution For",
       buttonText: "GET A QUOTE",
     },
     {
@@ -28,7 +28,7 @@ const HeaderSlider = () => {
       image:
         "https://res.cloudinary.com/dfn1s2ysa/image/upload/v1740464856/career%20counselling/pexels-august-de-richelieu-4427505_tv1m1h.jpg",
       title: "I can help you create positive & permanent changes in your life.",
-      subtitle: "---- Easy Solution For",
+      subtitle: " Easy Solution For",
       buttonText: "GET A QUOTE",
     },
     {
@@ -36,7 +36,7 @@ const HeaderSlider = () => {
       image:
         "https://res.cloudinary.com/dfn1s2ysa/image/upload/v1740464839/career%20counselling/businessman-1492563_1920_t7psj2.jpg",
       title: "Unlock your potential with professional coaching.",
-      subtitle: "----- Expert Guidance",
+      subtitle: " Expert Guidance",
       buttonText: "GET STARTED",
     },
   ];
@@ -78,6 +78,8 @@ const HeaderSlider = () => {
                   data-aos="fade-right"
                   className="uppercase text-xs sm:text-sm tracking-widest text-red-600 font-semibold text-left"
                 >
+        <span className="w-4 h-[1px] bg-red-800 inline-block mr-2"></span>
+
                   {slide.subtitle}
                 </p>
                 <h1
