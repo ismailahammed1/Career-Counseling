@@ -36,7 +36,7 @@ const NavBar = () => {
         Pages
       </Link>
       <div className="relative group">
-        <button className="block py-2 hover:text-red-800">Services</button>
+        <Link className="block py-2 hover:text-red-800 "  to="/services">Services</Link>
         <div className="absolute left-0 z-10 w-48 bg-white shadow-lg lg:mt-7 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
           <Link
             to="/service1"
