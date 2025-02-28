@@ -76,9 +76,9 @@ const HeaderSlider = () => {
               >
                 <p
                   data-aos="fade-right"
-                  className="uppercase text-xs sm:text-sm tracking-widest text-red-600 font-semibold text-left"
+                  className=" flex items-center uppercase text-xs sm:text-sm tracking-widest text-red-600 font-semibold text-left"
                 >
-        <span className="w-4 h-[1px] bg-red-800 inline-block mr-2"></span>
+        <span className="w-5 h-[1px] bg-red-800 inline-block mr-2"></span>
 
                   {slide.subtitle}
                 </p>

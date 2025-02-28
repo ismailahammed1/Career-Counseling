@@ -1,0 +1,103 @@
+{
+    "services": [
+      {
+        "title": "Business Planning",
+        "description": "We help businesses create strategic plans to achieve their goals and grow sustainably.",
+        "icon": "📊",
+        "benefits": [
+          "Strategic roadmap development",
+          "Financial forecasting",
+          "Market analysis"
+        ],
+        "link": "/services/business-planning"
+      },
+      {
+        "title": "Careers Coaching",
+        "description": "Our career coaching services guide individuals to achieve their professional aspirations.",
+        "icon": "👩‍💼",
+        "benefits": [
+          "Personalized career plans",
+          "Resume and interview preparation",
+          "Skill development"
+        ],
+        "link": "/services/careers-coaching"
+      },
+      {
+        "title": "Problems Solving",
+        "description": "We provide solutions to complex business problems through innovative thinking and analysis.",
+        "icon": "🔍",
+        "benefits": [
+          "Root cause analysis",
+          "Creative problem-solving techniques",
+          "Implementation support"
+        ],
+        "link": "/services/problems-solving"
+      },
+      {
+        "title": "Interviews Coaching",
+        "description": "Prepare for job interviews with our expert coaching and mock interview sessions.",
+        "icon": "🎤",
+        "benefits": [
+          "Mock interview practice",
+          "Feedback and improvement tips",
+          "Confidence building"
+        ],
+        "link": "/services/interviews-coaching"
+      },
+      {
+        "title": "Directives Leadership",
+        "description": "Develop leadership skills to effectively guide teams and organizations.",
+        "icon": "👨‍💼",
+        "benefits": [
+          "Leadership training programs",
+          "Team management strategies",
+          "Conflict resolution techniques"
+        ],
+        "link": "/services/directives-leadership"
+      },
+      {
+        "title": "Career Translation",
+        "description": "Transition smoothly into new roles or industries with our career translation services.",
+        "icon": "🌍",
+        "benefits": [
+          "Career path analysis",
+          "Skill gap assessment",
+          "Industry-specific guidance"
+        ],
+        "link": "/services/career-translation"
+      },
+      {
+        "title": "Workoutrun Treatries",
+        "description": "Our workout and wellness programs help you stay fit and motivated.",
+        "icon": "🏋️‍♂️",
+        "benefits": [
+          "Custom workout plans",
+          "Nutritional guidance",
+          "Motivational coaching"
+        ],
+        "link": "/services/workoutrun-treatries"
+      },
+      {
+        "title": "Improved Motivation",
+        "description": "Boost your motivation and productivity with our tailored coaching programs.",
+        "icon": "🚀",
+        "benefits": [
+          "Goal setting workshops",
+          "Mindset training",
+          "Accountability systems"
+        ],
+        "link": "/services/improved-motivation"
+      },
+      {
+        "title": "Career Consultancy",
+        "description": "Get expert advice on career decisions and professional growth.",
+        "icon": "📈",
+        "benefits": [
+          "Career assessment tools",
+          "Job market insights",
+          "Long-term career planning"
+        ],
+        "link": "/services/career-consultancy"
+      }
+    ]
+  }
