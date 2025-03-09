@@ -1,83 +1,70 @@
+import { useContext, useEffect, useState } from "react";
 import Aos from "aos";
-import { useEffect, useState } from "react";
+import "aos/dist/aos.css"; 
 import { CiShoppingCart } from "react-icons/ci";
 import { IoMdSearch } from "react-icons/io";
 import { MdMessage } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ServicesContext } from "../Contex/ServicesContext";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const {servicesData}=useContext(ServicesContext)
 
+ 
   useEffect(() => {
-    Aos.init({ duration: 1000 }); // Initialize AOS
+    Aos.init({ duration: 1000 });
   }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setIsSearchOpen(false); // Close search bar when menu is opened
+    setIsSearchOpen(false); 
   };
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
-    setIsMenuOpen(false); // Close mobile menu when search is opened
+    setIsMenuOpen(false); 
   };
 
   const closeSearch = () => {
-    setIsSearchOpen(false); // Close search bar
+    setIsSearchOpen(false); 
   };
+
+  
+  useEffect(() => {
+    if (isMenuOpen) {
+      Aos.refresh(); 
+    }
+  }, [isMenuOpen]);
 
   const menuBar = (
     <>
       <Link to="/" className="block py-2 hover:text-red-800">
         Home
       </Link>
-      <Link to="/pages" className="block py-2 hover:text-red-800">
-        Pages
-      </Link>
+  
       <div className="relative group">
-        <Link className="block py-2 hover:text-red-800 "  to="/services">Services</Link>
-        <div className="absolute left-0 z-10 w-48 bg-white shadow-lg lg:mt-7 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-          <Link
-            to="/service1"
-            className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
-          >
-            <a className="transition-transform transform hover:translate-x-2  inline-block">
-        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
-        Service 1
-            </a>
-          </Link>
-          <Link
-            to="/service1"
-            className="block py-2 px-4 hover:text-gray-100 
-            hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative
-            "
-          >
-            <a className="transition-transform transform hover:translate-x-2 inline-block">
-        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
-        Service 1
-            </a>
-          </Link>
-          <Link
-            to="/service1"
-            className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
-          >
-            <a className="transition-transform transform hover:translate-x-2 inline-block">
-        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
-        Service 1
-            </a>
-          </Link>
-          <Link
-            to="/service1"
-            className="block py-2 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 relative"
-          >
-            <a className="transition-transform transform hover:translate-x-2 inline-block">
-        <span className="w-4 h-[1px] hover:bg-red-800 bg-white inline-block mr-2"></span>
-        Service 1
-            </a>
-          </Link>
+        <Link className="block py-2 hover:text-red-800" to="/services">
+          Services
+        </Link>
+        <div className="absolute left-0 z-10 w-48 bg-white shadow-lg lg:mt-7 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0">
+          {servicesData.map((data, index) => (
+            <Link
+              key={data.id || index}
+              to={`${data.id}`}
+              className="py-5 px-4 hover:text-gray-100 hover:bg-[#dc3545] border-b-[0.5px] border-gray-200 flex items-center transition-colors duration-300 group"
+            >
+              {/* Left-to-Right Hover Animation */}
+              <span className="w-4 h-[1px] bg-gray-400 inline-block mr-2"></span>
+              <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2">
+                {data.title}
+              </span>
+            </Link>
+          ))}
         </div>
       </div>
+  
       <Link to="/projects" className="block py-2 hover:text-red-800">
         Projects
       </Link>
@@ -87,20 +74,25 @@ const NavBar = () => {
       <Link to="/contact-us" className="block py-2 hover:text-red-800">
         Contact Us
       </Link>
+      <Link to="/register" className="block py-2 hover:text-red-800">
+        Sign up
+      </Link>
     </>
   );
 
   return (
-    <div className=" flex justify-between shadow-lg">
+    <div className="flex justify-between shadow-lg">
       {/* Navbar */}
-      <div className=" navbar w-full items-center flex justify-center">
-        <div className=" lg:ml-60 ml-16">
-          <a className="text-xl font-bold text-gray-800">IAR career counselling</a>
+      <div className="navbar w-full items-center flex justify-center">
+        <div className="lg:ml-60 ml-16">
+          <Link className="text-xl font-bold text-gray-800">
+            IAR career counselling
+          </Link>
         </div>
       </div>
 
       {/* Desktop Menu */}
-      <div className="bg-white w-full items-center flex justify-center navbar ">
+      <div className="bg-white w-full items-center flex justify-center navbar">
         <div className="navbar-center h-20 hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-4 font-semibold gap-2">
             {menuBar}
@@ -123,7 +115,7 @@ const NavBar = () => {
 
       {/* Mobile Menu Overlay with Black Opacity */}
       <div
-        className={`fixed inset-0  bg-black bg-opacity-10 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black bg-opacity-10 transition-opacity duration-300 ${
           isMenuOpen || isSearchOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible"
@@ -139,6 +131,7 @@ const NavBar = () => {
         className={`fixed inset-y-0 z-50 right-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ top: 0 }} // Ensure the menu sticks to the top
       >
         <div className="p-4">
           <div className="flex justify-between">

@@ -6,7 +6,7 @@ import { MdOutline6FtApart } from "react-icons/md";
 
 const Header = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden ">
       {/* Main Container */}
       <div className="flex flex-col lg:flex-row justify-between items-center w-full">
         {/* Left Section: Social Media Icons */}

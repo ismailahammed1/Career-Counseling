@@ -1,13 +1,17 @@
+import { ServicesProvider } from "./Contex/ServicesContext"
+import HomeLayout from "./Layouts/HomeLayout"
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
+
 function App() {
 
 
   return (
-    <div>
-    <h1 className="text-3xl font-bold underline p-8">
-    <button className="btn btn-primary">Primary</button>
-    Hello world!
-  </h1>
-  </div>
+   <ServicesProvider>
+    <HomeLayout/>
+   </ServicesProvider>
   )
 }
 

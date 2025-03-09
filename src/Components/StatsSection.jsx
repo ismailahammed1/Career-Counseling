@@ -10,7 +10,7 @@ const StatsSection = () => {
               Who We Are
             </p>
             <h2 className="text-3xl lg:text-4xl font-extrabold mt-2 text-white tracking-wide">
-              It's time to dream big and discover your calling
+              It&apos;s time to dream big and discover your calling
             </h2>
             <p className="mt-3 text-white text-lg tracking-wide text-justify">
               Our values drive not only our culture and how we work with clients but also how we live our lives. We partner with our clients to achieve their goals and empower transformation.
@@ -28,7 +28,8 @@ const StatsSection = () => {
             {/* Stat 1 */}
             <div className="bg-white p-8 shadow-lg rounded-lg">
               <h3 className="text-5xl font-bold text-gray-800">185+</h3>
-              <p className="text-gray-800 text-lg font-medium mt-4">
+              <p className="text-gray-900 text-lg font-medium mt-4 tracking-widest
+">
                 Most people are aware of exactly what their purpose is and who they are trying to coach.
               </p>
             </div>
@@ -36,15 +37,17 @@ const StatsSection = () => {
             {/* Stat 2 */}
             <div className="bg-white p-8 shadow-lg rounded-lg">
               <h3 className="text-5xl font-bold text-gray-800">85%</h3>
-              <p className="text-gray-800 text-lg font-medium mt-4">
+              <p className="text-gray-900 text-lg font-medium mt-4 tracking-widest
+">
                 People achieve higher success rates with guided coaching.
               </p>
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-white p-8 shadow-lg rounded-lg">
-              <h3 className="text-5xl font-bold text-gray-800">85M</h3>
-              <p className="text-gray-800 text-lg font-medium mt-4">
+            <div className="bg-red-800  p-8 shadow-lg rounded-lg">
+              <h3 className="text-5xl font-bold text-white">85M</h3>
+              <p className="text-white text-lg font-medium mt-4 tracking-widest
+">
                 Coaching impacts millions by helping them achieve their dreams.
               </p>
             </div>

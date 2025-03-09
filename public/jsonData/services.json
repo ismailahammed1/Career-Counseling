@@ -1,6 +1,7 @@
 {
     "services": [
       {
+       "id":1,
         "title": "Business Planning",
         "description": "We help businesses create strategic plans to achieve their goals and grow sustainably.",
         "icon": "📊",
@@ -13,6 +14,7 @@
         "link": "/services/business-planning"
       },
       {
+       "id":2,
         "title": "Careers Coaching",
         "description": "Our career coaching services guide individuals to achieve their professional aspirations.",
         "icon": "👩‍💼",
@@ -25,6 +27,7 @@
         "link": "/services/careers-coaching"
       },
       {
+       "id":3,
         "title": "Problems Solving",
         "description": "We provide solutions to complex business problems through innovative thinking and analysis.",
         "icon": "🔍",
@@ -37,6 +40,7 @@
         "link": "/services/problems-solving"
       },
       {
+       "id":4,
         "title": "Interviews Coaching",
         "description": "Prepare for job interviews with our expert coaching and mock interview sessions.",
         "icon": "🎤",
@@ -49,6 +53,7 @@
         "link": "/services/interviews-coaching"
       },
       {
+       "id":5,
         "title": "Directives Leadership",
         "description": "Develop leadership skills to effectively guide teams and organizations.",
         "icon": "👨‍💼",
@@ -61,6 +66,7 @@
         "link": "/services/directives-leadership"
       },
       {
+       "id":6,
         "title": "Career Translation",
         "description": "Transition smoothly into new roles or industries with our career translation services.",
         "icon": "🌍",
@@ -73,6 +79,7 @@
         "link": "/services/career-translation"
       },
       {
+       "id":7,
         "title": "Workoutrun Treatries",
         "description": "Our workout and wellness programs help you stay fit and motivated.",
         "icon": "🏋️‍♂️",
@@ -85,6 +92,7 @@
         "link": "/services/workoutrun-treatries"
       },
       {
+       "id":8,
         "title": "Improved Motivation",
         "description": "Boost your motivation and productivity with our tailored coaching programs.",
         "icon": "🚀",
@@ -97,6 +105,7 @@
         "link": "/services/improved-motivation"
       },
       {
+       "id":9,
         "title": "Career Consultancy",
         "description": "Get expert advice on career decisions and professional growth.",
         "icon": "📈",

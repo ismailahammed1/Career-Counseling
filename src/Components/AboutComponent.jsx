@@ -5,7 +5,7 @@ const AboutComponent = () => {
     <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 p-6 lg:p-10 max-w-7xl mx-auto">
       {/* Left Image Section */}
       <div className="relative w-full lg:w-1/2">
-        <div className="absolute top-4 left-4 w-full h-full bg-[#dc3545] -z-10"></div>
+        <div className="absolute top-6 left-6 w-full h-full bg-[#dc3545] -z-10"></div>
         <img
           src="https://res.cloudinary.com/dfn1s2ysa/image/upload/v1740464839/career%20counselling/job-5382501_1920_ychbqw.jpg"
           alt="Coaching"

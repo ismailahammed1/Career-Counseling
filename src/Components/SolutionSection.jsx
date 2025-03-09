@@ -1,5 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
-import { GiNetworkBars } from "react-icons/gi";
+import { GiAmputation, GiNetworkBars } from "react-icons/gi";
+import { LiaBookReaderSolid } from "react-icons/lia";
 import { TbTargetArrow } from "react-icons/tb";
 
 const SolutionSection = () => {
@@ -37,7 +38,8 @@ const SolutionSection = () => {
         "Development Skill",
         "Business intelligence",
       ],
-      icon: "💼",
+      icon: <LiaBookReaderSolid />
+      ,
       isActive: false, // Active card (Highlighted)
     },
     {
@@ -49,7 +51,7 @@ const SolutionSection = () => {
         "Development Skill",
         "Business intelligence",
       ],
-      icon: "👥",
+      icon: <GiAmputation />,
       isActive: false,
     },
   ];
@@ -80,7 +82,7 @@ const SolutionSection = () => {
         {data.map((item) => (
           <div
             key={item.id}
-            className="group p-2 border  shadow-md transition-all duration-300 hover:bg-gray-900 sm:w-full md:w-[calc(50%-1.5rem)] lg:w-96"
+            className="group p-2 border border-gray-200  transition-all duration-300 hover:bg-gray-900 sm:w-full md:w-[calc(50%-1.5rem)] lg:w-96"
           >
             {/* Icon & Title */}
             <p className="text-2xl font-bold text-gray-300 text-end group-hover:text-white">

@@ -49,11 +49,11 @@ const Footer = () => {
         {/* Our Departments Section */}
         <div className="p-3 flex flex-col w-full md:w-1/3 items-center text-white gap-2 font-medium">
           <span className="footer-title">Our Departments</span>
-          <a className="link link-hover">About Us</a>
-          <a className="link link-hover">Customer</a>
-          <a className="link link-hover">Best Seller</a>
-          <a className="link link-hover">Centre</a>
-          <a className="link link-hover">Privacy Policy</a>
+          <Link className="link link-hover">About Us</Link>
+          <Link className="link link-hover">Customer</Link>
+          <Link className="link link-hover">Best Seller</Link>
+          <Link className="link link-hover">Centre</Link>
+          <Link className="link link-hover">Privacy Policy</Link>
         </div>
 
         {/* Sign-Up Section */} 
@@ -71,7 +71,7 @@ const Footer = () => {
                 placeholder="username@site.com"
                 className="input input-bordered w-full pr-16"
               />
-              <button className="bg-red-800 btn absolute top-0 right-0 rounded">
+              <button className="bg-red-800 btn absolute top-0 right-0 rounded text-white">
                 Subscribe
               </button>
             </div>
