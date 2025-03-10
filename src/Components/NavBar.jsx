@@ -85,7 +85,7 @@ const NavBar = () => {
       {/* Navbar */}
       <div className="navbar w-full items-center flex justify-center">
         <div className="lg:ml-60 ml-16">
-          <Link className="text-xl font-bold text-gray-800">
+          <Link to="/" className="text-xl font-bold text-gray-800">
             IAR career counselling
           </Link>
         </div>
