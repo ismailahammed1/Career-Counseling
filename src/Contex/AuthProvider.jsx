@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState } from "react"
 
 export const AuthContext=createContext()
 
  
-const AuthProvider = () => {
-    const [user, setUser] = useState({ email: "ismail@gmil.com", password: "1234" });
+const AuthProvider = ({children}) => {
+    const [user, setUser] = useState({ email: "ismail@gmil.com", name: "1234" });
 
 
     const authInfo={
@@ -12,7 +13,7 @@ const AuthProvider = () => {
         setUser,
     }
   return (
-    <AuthContext.Provider value={authInfo}>AuthProvider</AuthContext.Provider>
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   )
 }
 

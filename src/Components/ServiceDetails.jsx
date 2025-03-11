@@ -26,6 +26,8 @@ const ServiceDetails = () => {
   }
 
   return (
+
+    
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
       {/* Left Sidebar */}
       <aside className="md:col-span-1 space-y-8">
@@ -78,7 +80,7 @@ const ServiceDetails = () => {
       <main className="md:col-span-2 space-y-12">
         {/* Service Top Image */}
         <img
-          src={service.image || "https://via.placeholder.com/600x300"}
+          src={service.image || "https://res.cloudinary.com/dfn1s2ysa/image/upload/v1740724505/career%20counselling/pexels-photo-9034214_kcsavw.webp"}
           alt={service.title}
           className="w-full rounded-lg shadow-lg"
         />

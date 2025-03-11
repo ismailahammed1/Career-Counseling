@@ -1,15 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
-import router from './routers/router'
-import { ServicesProvider } from './Contex/ServicesContext' // ✅ Ensure correct path
-
 import './index.css'
+import { ServicesProvider } from './Contex/ServicesContext'
+
+import App from './App'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ServicesProvider>  {/* ✅ Wrap RouterProvider inside ServicesProvider */}
-      <RouterProvider router={router} />
+    <ServicesProvider>
+    
+    <App/>
+    
     </ServicesProvider>
   </StrictMode>,
 );

@@ -6,11 +6,13 @@ import { IoMdSearch } from "react-icons/io";
 import { MdMessage } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { ServicesContext } from "../Contex/ServicesContext";
+import { AuthContext } from "../Contex/AuthProvider";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const {servicesData}=useContext(ServicesContext)
+  const {user}=useContext(AuthContext)
 
  
   useEffect(() => {
@@ -74,9 +76,12 @@ const NavBar = () => {
       <Link to="/contact-us" className="block py-2 hover:text-red-800">
         Contact Us
       </Link>
+      <p className="block py-2 hover:text-red-800">{user.name} ({user.email})</p>
+
       <Link to="/register" className="block py-2 hover:text-red-800">
         Sign up
       </Link>
+    
     </>
   );
 
@@ -92,8 +97,8 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="bg-white w-full items-center flex justify-center navbar">
-        <div className="navbar-center h-20 hidden lg:flex">
+      <div className="bg-white w-full items-center flex justify-center navbar ">
+        <div className="navbar-center h-20 hidden lg:flex px-10">
           <ul className="menu menu-horizontal px-1 space-x-4 font-semibold gap-2">
             {menuBar}
           </ul>
@@ -115,7 +120,7 @@ const NavBar = () => {
 
       {/* Mobile Menu Overlay with Black Opacity */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-10 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black bg-opacity-10 transition-opacity duration-300 z-20 ${
           isMenuOpen || isSearchOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible"

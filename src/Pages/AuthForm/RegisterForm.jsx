@@ -9,7 +9,7 @@ const RegisterForm = () => {
   const [user, setUser] = useState({ name: "", email: "", password: "" });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="flex items-center justify-center max-h-screen bg-gray-100 p-4">
       <div className="flex bg-white shadow-lg rounded-xl overflow-hidden w-[850px]">
         {/* Left Image Section */}
         <div className="hidden md:flex w-1/2">

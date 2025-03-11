@@ -27,7 +27,7 @@ const HomeLayout = () => {
         <StatsSection />
         
         {/*  Showing only 6 services & More button */}
-        <ComponentService limit={6} showMoreButton={true} />
+        <ComponentService limit={6} showMoreButton={true} to="services" />
 
         <ClientLogos />
         <Testimonials />
