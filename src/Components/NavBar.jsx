@@ -1,42 +1,41 @@
 import { useContext, useEffect, useState } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 import { CiShoppingCart } from "react-icons/ci";
 import { IoMdSearch } from "react-icons/io";
 import { MdMessage } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { ServicesContext } from "../Contex/ServicesContext";
 import { AuthContext } from "../Contex/AuthProvider";
+import { RxAvatar } from "react-icons/rx";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const {servicesData}=useContext(ServicesContext)
-  const {user}=useContext(AuthContext)
+  const { servicesData } = useContext(ServicesContext);
+  const { user, logOut } = useContext(AuthContext);
 
- 
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setIsSearchOpen(false); 
+    setIsSearchOpen(false);
   };
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   const closeSearch = () => {
-    setIsSearchOpen(false); 
+    setIsSearchOpen(false);
   };
 
-  
   useEffect(() => {
     if (isMenuOpen) {
-      Aos.refresh(); 
+      Aos.refresh();
     }
   }, [isMenuOpen]);
 
@@ -45,7 +44,7 @@ const NavBar = () => {
       <Link to="/" className="block py-2 hover:text-red-800">
         Home
       </Link>
-  
+
       <div className="relative group">
         <Link className="block py-2 hover:text-red-800" to="/services">
           Services
@@ -66,21 +65,21 @@ const NavBar = () => {
           ))}
         </div>
       </div>
-  
-      <Link to="/projects" className="block py-2 hover:text-red-800">
-        Projects
-      </Link>
+
       <Link to="/blog" className="block py-2 hover:text-red-800">
         Blog
       </Link>
       <Link to="/contact-us" className="block py-2 hover:text-red-800">
         Contact Us
       </Link>
-      <p className="block py-2 hover:text-red-800">{user.name} ({user.email})</p>
 
-      <Link to="/register" className="block py-2 hover:text-red-800">
+          {
+          user&& user?.email?   <Link onClick={logOut} to="/" className="block py-2 hover:text-red-800">
+          Logout
+        </Link>:  <Link to="/register" className="block py-2 hover:text-red-800">
         Sign up
       </Link>
+        }
     
     </>
   );
@@ -90,7 +89,7 @@ const NavBar = () => {
       {/* Navbar */}
       <div className="navbar w-full items-center flex justify-center">
         <div className="lg:ml-60 ml-16">
-          <Link to="/" className="text-xl font-bold text-gray-800">
+          <Link to="/" className="text-2xl font-bold text-gray-800">
             IAR career counselling
           </Link>
         </div>
@@ -99,7 +98,7 @@ const NavBar = () => {
       {/* Desktop Menu */}
       <div className="bg-white w-full items-center flex justify-center navbar ">
         <div className="navbar-center h-20 hidden lg:flex px-10">
-          <ul className="menu menu-horizontal px-1 space-x-4 font-semibold gap-2">
+          <ul className="menu menu-horizontal px-1 space-x-4 font-semibold gap-2 text-2xl">
             {menuBar}
           </ul>
         </div>
@@ -108,14 +107,22 @@ const NavBar = () => {
       {/* Right Side Section */}
       <div className="bg-[#dc3545] w-full lg:flex justify-center text-amber-50 hidden">
         <div className="navbar font-medium text-2xl gap-4 py-2 px-4">
-          <CiShoppingCart className="font-bold" />
+          <CiShoppingCart className="font-bold text-4xl cursor-pointer" />
           <IoMdSearch onClick={toggleSearch} className="cursor-pointer" />
-          <MdMessage />
+          <MdMessage className="cursor-pointer"/>
           <div className="flex flex-col ml-2">
             <span>Have any Question ?</span>
             <span>+0 123 888 999</span>
           </div>
+          {user && user.email? 
+         ( <div className="flex justify-center items-center gap-3"> 
+          <img className="w-10 h-10 rounded-full cursor-pointer"  src={user?.photoURL} alt="" />
+         <p className=" from-neutral-200 text-2xl cursor-pointer">{user?.displayName         }</p>
+          </div>)
+          :<RxAvatar  className="w-10 h-10 rounded-full cursor-pointer"/>
+      }
         </div>
+       
       </div>
 
       {/* Mobile Menu Overlay with Black Opacity */}

@@ -6,7 +6,7 @@ const StatsSection = () => {
         <div className="bg-gray-600 flex flex-col lg:flex-row w-full">
           <div className="p-10 lg:p-20">
             <p className="px-2 py-2 flex items-center gap-2 font-bold text-[#dc3545]">
-              <span className="w-6 h-[1px] bg-[#dc3545] inline-block"></span>
+              <span className="w-6 h-[1px] bg-[#dc3545] inline-block text-2xl"></span>
               Who We Are
             </p>
             <h2 className="text-3xl lg:text-4xl font-extrabold mt-2 text-white tracking-wide">

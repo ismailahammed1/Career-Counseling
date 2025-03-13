@@ -7,7 +7,7 @@ const Banner = ({ title }) => {
         backgroundImage: "url('https://res.cloudinary.com/dfn1s2ysa/image/upload/v1741241653/career%20counselling/title-01_wuh2e4.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-20"></div>
 
       <div className="relative text-center text-white">
         <h2 className="text-xl md:text-xl font-bold">{title}</h2>

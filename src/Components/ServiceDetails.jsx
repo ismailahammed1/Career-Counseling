@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ServicesContext } from "../Contex/ServicesContext";
 import teamMembers from "../../public/jsonData/teamData";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -12,19 +12,27 @@ import "swiper/css/pagination";
 const ServiceDetails = () => {
   const { id } = useParams();
   const { servicesData } = useContext(ServicesContext);
+
+  // Show loading state if data is not available yet
   if (!servicesData) return <div>Loading...</div>;
 
+  // Find the service by id
   const service = servicesData.find((s) => s.id === parseInt(id));
   const selectedMembers = teamMembers.slice(0, 3);
 
+  // If service is not found, display an error message
   if (!service) {
     return (
       <div className="text-center py-20 text-2xl text-red-600">
-        Service not found
+        Service not found. Please check the URL or go back to the services page.
       </div>
     );
   }
 
+  // Set the document title dynamically based on the service
+  useEffect(() => {
+    document.title = `${service.title} - Service Details - IAR Career Counselling`;
+  }, [service]);
   return (
 
     

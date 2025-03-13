@@ -30,8 +30,8 @@ const Header = () => {
 
       {/* Statistics Section */}
       <div className="flex  flex-col md:flex-row w-full">
-        <div className="h-24 bg-amber-100 w-full"></div>
-        <div className="h-24 bg-amber-100 w-full flex justify-center">
+        <div className="h-24  w-full"></div>
+        <div className="h-24 w-full flex justify-center">
           <div className="mt-5 w-full md:w-[700px] flex flex-col md:flex-row justify-center gap-3 text-center md:text-left">
             <div className="flex flex-col md:flex-row items-center gap-3">
               <h1 className="text-[#af2432] font-extrabold text-4xl">545+</h1>

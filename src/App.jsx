@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { StrictMode } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './routers/router';
-import './index.css';
-import { ServicesProvider } from './Contex/ServicesContext';
-import AuthProvider from './Contex/AuthProvider';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routers/router";
+import "./index.css";
+import { ServicesProvider } from "./Contex/ServicesContext";
+import AuthProvider from "./Contex/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
@@ -15,15 +16,13 @@ function App() {
   }, []);
 
   return (
-    <StrictMode>
+    
       <ServicesProvider>
-    <AuthProvider>
-
-        <RouterProvider router={router} />
-  
-    </AuthProvider>
+        <AuthProvider>
+          <ToastContainer position="top-right" autoClose={3000} />
+          <RouterProvider router={router} />
+        </AuthProvider>
       </ServicesProvider>
-    </StrictMode>
   );
 }
 

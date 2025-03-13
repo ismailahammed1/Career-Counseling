@@ -7,6 +7,8 @@ import RegisterForm from "../Pages/AuthForm/RegisterForm";
 import LoginForm from "../Pages/AuthForm/LoginForm";
 import BlogPage from "../Pages/Blog/BlogPage";
 import ContactPage from "../Pages/ContactPage/ContactPage";
+import PrivateRoute from "./PrivateRoute";
+import NotFound from "../Pages/NotFound.JSX";
 
 
 const router = createBrowserRouter([
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":id", 
-        element: <ServiceDetails />, 
+        element: <PrivateRoute><ServiceDetails /></PrivateRoute>, 
       },
     ],
   },
@@ -60,7 +62,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>error</h1>,
+    element: <NotFound/>,
   },
 ]);
 

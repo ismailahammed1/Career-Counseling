@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ServicesContext } from "../Contex/ServicesContext";
 
@@ -12,7 +12,9 @@ const ComponentService = ({ limit, showMoreButton = false }) => {
   }
 
   const displayedServices = limit ? servicesData.slice(0, limit) : servicesData;
-
+  useEffect(() => {
+    document.title = "Service - IAR career counselling"; 
+  }, []);
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -31,8 +33,8 @@ const ComponentService = ({ limit, showMoreButton = false }) => {
               aria-label={`Learn more about ${service.title}`}
               className="absolute -bottom-4 left-0 right-0 bg-white text-gray-900 px-4 py-5 w-11/12 mx-auto mb-3 transition-all duration-300 group-hover:bg-red-800 group-hover:text-white"
             >
-              <p className="text-xs uppercase tracking-wide text-gray-800 group-hover:text-white items-center">
-                <span className="w-4 h-[1px] bg-gray-400 inline-block mr-2"></span> {service.title.split(" ")[0]}
+              <p className="text-xs uppercase tracking-wide text-gray-900 group-hover:text-white items-center">
+                <span className="w-4 h-[1px] bg-gray-400 inline-block mr-2 mb-1"></span> {service.title.split(" ")[0]}
               </p>
               <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
                 {service.title}

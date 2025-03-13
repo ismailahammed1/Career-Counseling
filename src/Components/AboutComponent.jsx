@@ -15,13 +15,13 @@ const AboutComponent = () => {
 
       {/* Right Content Section */}
       <div className="w-full lg:w-1/2 mt-6 lg:mt-0">
-        <p className="text-red-600 font-semibold uppercase tracking-widest">
+        <p className="text-red-600 font-semibold uppercase tracking-widest text-xl">
           About Us
         </p>
         <h2 className="text-2xl lg:text-3xl font-bold mt-2">
           Why Most People Get Excited About Coaching
         </h2>
-        <p className="text-gray-600 mt-3 text-sm lg:text-base">
+        <p className="text-gray-600 mt-3 text-lg lg:text-base">
           Combines industry knowledge, decades. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
@@ -30,7 +30,7 @@ const AboutComponent = () => {
         {/* Quote Section */}
         <div className="mt-5 p-4 lg:p-5 bg-gray-100 border-l-4 border-red-600">
           <FaQuoteLeft className="text-[#dc3545] text-2xl" />
-          <p className="text-gray-700 italic mt-2 text-sm lg:text-base">
+          <p className="text-gray-700 italic mt-2 text-lg lg:text-base">
             Vestibulum commodo volutpat a, convallis ac laoreet enim. Phasellus
             fermentum to deliver excellence to our clients experience.
           </p>
