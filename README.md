@@ -8,7 +8,7 @@ IAR Career Counselling is a professional career guidance platform designed to he
 
 ## 🔥 Features & Characteristics
 - 🏆 **Comprehensive Career Services:** Business planning, career coaching, and leadership training.
-- 🎯 **Dynamic Page Titles:** Uses `react-helmet-async` for SEO-friendly page titles.
+
 - 📱 **Fully Responsive:** Works seamlessly on all devices.
 - ⚡ **Fast Performance:** Optimized with lazy-loading images and code splitting.
 - 🎨 **Interactive Design:** Uses Swiper.js for expert member carousels.
@@ -16,7 +16,7 @@ IAR Career Counselling is a professional career guidance platform designed to he
 ## 🛠 Tech Stack
 - **Frontend:** React.js, Tailwind CSS
 - **Routing:** React Router
-- **SEO & Performance:** React Helmet, Lazy Loading
+- **Performance:**  Lazy Loading
 
 
 

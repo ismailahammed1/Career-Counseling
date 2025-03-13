@@ -1,8 +1,12 @@
 
+import { useEffect } from "react";
 import blogData from "../../../public/jsonData/BlogData";
 import BlogPost from "./BlogPost";
 
 const BlogPage = () => {
+    useEffect(() => {
+      document.title = `Blog Page - IAR Career Counselling`;
+    }, []);
   return (
     <div className=" mx-auto px-4 py-8 max-w-10/12 ">
       <h1 className="text-4xl font-bold text-center mb-8">Career Counseling Blog</h1>

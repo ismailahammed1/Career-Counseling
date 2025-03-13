@@ -49,7 +49,7 @@ const NavBar = () => {
         <Link className="block py-2 hover:text-red-800" to="/services">
           Services
         </Link>
-        <div className="absolute left-0 z-10 w-48 bg-white shadow-lg lg:mt-7 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0">
+        <div className="absolute left-0 z-10 w-60 bg-white shadow-lg lg:mt-7 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0">
           {servicesData.map((data, index) => (
             <Link
               key={data.id || index}

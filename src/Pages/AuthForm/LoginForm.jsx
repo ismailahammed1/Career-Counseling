@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Contex/AuthProvider";
 import { toast } from "react-toastify";
-import PageTitleUpdater from "../../Components/PageTitleUpdater";
 
 AOS.init();
 
@@ -37,10 +36,9 @@ const LoginForm = () => {
         setError(error.message); 
       });
   };
-  PageTitleUpdater("Login - IAR career counselling");
-  // useEffect(() => {
-  //   document.title = "Login - IAR career counselling"; 
-  // }, []);
+  useEffect(() => {
+    document.title = "Login - IAR career counselling"; 
+  }, []);
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="flex bg-white shadow-lg rounded-xl overflow-hidden w-[850px]">

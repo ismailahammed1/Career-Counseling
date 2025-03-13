@@ -10,9 +10,13 @@ import Testimonials from "../Components/Testimonials";
 import TeamSlider from "../Components/TeamSlider";
 import NewsSection from "../Components/NewsSection";
 import ServicesSection from "../Components/ServicesSection";
+import { useEffect } from "react";
 
 
 const HomeLayout = () => {
+   useEffect(() => {
+      document.title = ` IAR Career Counselling`;
+    }, []);
   return (
     <div>
       <nav>

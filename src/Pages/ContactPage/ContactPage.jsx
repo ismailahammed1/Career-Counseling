@@ -8,8 +8,9 @@ import { GrContact } from "react-icons/gr";
 const ContactPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    document.title = `Contact Page - IAR Career Counselling`;
   }, []);
-
+  
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Contact Header */}
